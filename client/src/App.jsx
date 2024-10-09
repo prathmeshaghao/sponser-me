@@ -5,6 +5,7 @@ import Memos from "./components/Memos";
 import Buy from "./components/Buy";
 import chai from "./chai.png";
 import "./App.css";
+import "./AccountBox.css";
 
 function App() {
   const [state, setState] = useState({
@@ -48,11 +49,12 @@ function App() {
   }, []);
   return (
     <div>
-      <img src={chai} className="img-fluid" alt=".." width="100%" />
-      <p style={{ marginTop: "10px", marginLeft: "5px" }}>
-        <small>Connected Account - {account}</small>
-      </p>
-
+      <img src={chai} className="img-fluid" alt="chai" width="100%" />
+      <div className="account-box">
+        <p>
+          <small>Connected Account - {account}</small>
+        </p>
+      </div>
       <Buy state={state} />
       <Memos state={state} />
     </div>

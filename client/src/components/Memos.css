@@ -1,4 +1,85 @@
-.container-fluid{
-    margin-left: 120px;
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
 
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f8f9fa;
+}
+
+/* .container-fluid {
+} */
+
+.title {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2em;
+  color: #333;
+  font-weight: bold;
+}
+
+.memos-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.memos-table th {
+  background-color: #0056b3;
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.memos-table th,
+.memos-table td {
+  text-align: center;
+}
+
+.memos-row {
+  transition: background-color 0.3s;
+}
+
+.memos-cell {
+  background-color: dodgerblue;
+  border: 1px solid white;
+  padding: 15px;
+  color: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+.memos-table tr:nth-child(odd) .memos-cell {
+  background-color: #96c9ff;
+}
+
+.memos-table tr:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.memos-table tr {
+  border: 1px solid #eaeaea;
+}
+
+.memos-table td {
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .container-fluid {
+    margin-left: 0;
+    padding: 10px;
+  }
+
+  .memos-cell {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+
+  .title {
+    font-size: 1.5em;
+  }
 }
